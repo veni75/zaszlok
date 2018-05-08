@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by veni75 (http://jsbin.com/qirecoz/10/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="zaszlo">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Practice JavaScript by drawing</title>
+</head>
+<body>
+  <canvas id="myCanvas1" height="300" width="450" style="border: 1px solid black"></canvas>
+  <canvas id="myCanvas2" height="300" width="450" style="border: 1px solid black"></canvas>
+  <canvas id="myCanvas3" height="300" width="450" style="border: 1px solid black"></canvas>
+<script id="jsbin-javascript">
+var canvas = document.getElementById('myCanvas1');
+var context = canvas.getContext('2d');
+
+var a = 250;
+var b = 50;
+var cw = 450;
+var ch = 300;
+
+context.fillStyle = 'rgba(255,0,0,1)';
+context.fillRect(2*b,1.5*b,a,b);
+
+context.fillStyle = 'white';
+context.fillRect(2*b,2.5*b,a,b);
+
+context.fillStyle = 'rgb(60,179,113,1)';
+context.fillRect(2*b,3.5*b,a,b);
+
+var canvas = document.getElementById('myCanvas2');
+var context = canvas.getContext('2d');
+
+context.fillStyle = 'black';
+context.fillRect(2*b,1.5*b,a,b);
+
+context.fillStyle = 'red';
+context.fillRect(2*b,2.5*b,a,b);
+
+context.fillStyle = 'yellow';
+context.fillRect(2*b,3.5*b,a,b);
+
+var canvas = document.getElementById('myCanvas3');
+var context = canvas.getContext('2d');
+
+context.fillStyle = 'rgba(0,0,255,1)';
+context.fillRect(0,0,cw,ch);
+
+context.beginPath();
+context.moveTo(0, ch) ;
+context.lineTo(cw, 0);
+context.strokeStyle = "white";
+context.lineWidth=35;
+context.stroke();
+
+context.beginPath();
+context.moveTo(0, 0) ;
+context.lineTo(cw, ch);
+context.strokeStyle = "white";
+context.lineWidth=35;
+context.stroke();
+
+context.beginPath();
+context.moveTo(0, ch) ;
+context.lineTo(cw, 0);
+context.strokeStyle = "red";
+context.lineWidth=15;
+context.stroke();
+
+context.beginPath();
+context.moveTo(0, 0) ;
+context.lineTo(cw, ch);
+context.strokeStyle = "red";
+context.lineWidth=15;
+context.stroke();
+
+context.fillStyle = 'white';
+context.fillRect(cw/2-30,0,60,ch);
+
+context.fillStyle = 'white';
+context.fillRect(0,ch/2-30,cw,60);
+
+
+context.fillStyle = 'rgba(255,0,0,1)';
+context.fillRect(cw/2-20,0,40,ch);
+
+context.fillStyle = 'rgba(255,0,0,1)';
+context.fillRect(0,ch/2-20,cw,40);
+
+
+
+
+</script>
+</body>
+</html>
